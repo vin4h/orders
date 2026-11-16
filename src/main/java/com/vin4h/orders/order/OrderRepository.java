@@ -17,9 +17,9 @@ public interface OrderRepository extends JpaRepository<Order, UUID> {
     @Query(
             value = """
             SELECT new com.vin4h.orders.order.OrderSummary(o.id, o.customerId, o.status, o.total)
-            FROM order o
+            FROM Order o
             """,
-            countQuery = "SELECT count(o) FROM order o"
+            countQuery = "SELECT count(o) FROM Order o"
     )
     Page<OrderSummary> findSummaries(Pageable pageable);
 }
