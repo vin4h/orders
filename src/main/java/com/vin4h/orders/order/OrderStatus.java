@@ -1,4 +1,3 @@
 package com.vin4h.orders.order;
 
-public class OrderStatus {
-}
+public enum OrderStatus {PENDING, PAID, CANCELLED}
