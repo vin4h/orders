@@ -1,4 +1,9 @@
 package com.vin4h.orders.order;
 
-public class OrderNotFoundException {
+import java.util.UUID;
+
+public class OrderNotFoundException extends RuntimeException {
+    public OrderNotFoundException(UUID id) {
+        super("Order %s not found".formatted(id));
+    }
 }
